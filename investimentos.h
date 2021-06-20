@@ -20,3 +20,20 @@ double conversaoDeTaxajc(double taxa){
     conversao = pow(((1+taxa)-1),(1.0/12));
     return conversao;
 }
+
+// Montante ao final do período aplicado considerando juros simples.
+double montanteFinaljs(double capital, double taxa, int tempo){
+    double montante, juros;
+    juros = 1 + ((taxa/100) * tempo);
+    montante = capital * juros;
+    return montante;
+}
+
+// Montante ao final do período considerando juros compostos.
+double montanteFinaljc(double capital, double taxa, int tempo){
+    double montante, juros;
+    juros = pow((1 + (taxa/100)),tempo);
+    montante = capital * juros;
+    return montante;
+}
+
