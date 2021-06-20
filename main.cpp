@@ -15,5 +15,17 @@ int main() {
   cout << "Informe o periodo do investimento (em meses) = ";
   cin >> i.periodo;
 
+  cout << "\nMontante = R$ " << i.montanteInvestido;
+  cout << "\nTaxa de juros = " << i.taxaDejuros;
+  cout << "\nPeriodo = " << i.periodo;
 
+  cout << "\n\nMontante (final de " << i.periodo << " meses)com juros simples = R$ " << montanteFinaljs (i.montanteInvestido,i.taxaDejuros,i.periodo);
+
+  cout << "\nMontante (final de " << i.periodo << " meses) com juros compostos = R$ " << montanteFinaljc(i.montanteInvestido,i.taxaDejuros,i.periodo);
+
+  cout << "\nConversao de taxa js: (" << i.taxaDejuros << "%a.a.) para (" << conversaoDeTaxajs(i.taxaDejuros) << "%a.m.)";
+
+    cout << "\nConversao de taxa jc: (" << i.taxaDejuros << "%a.a.) para (" << conversaoDeTaxajc(i.taxaDejuros) << "%a.m.)\n";
+    
+    return 0;
 }
