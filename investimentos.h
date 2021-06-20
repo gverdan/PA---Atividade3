@@ -9,3 +9,14 @@ struct tInvestimento {
 
 };
 
+// Conversão da taxa de juros de ao ano para ao mês.
+double conversaoDeTaxajs(double taxa){
+    return taxa / 12;
+}
+
+// Conversão da taxa de juros de ao ano para ao mês.
+double conversaoDeTaxajc(double taxa){
+    double conversao;
+    conversao = pow(((1+taxa)-1),(1.0/12));
+    return conversao;
+}
