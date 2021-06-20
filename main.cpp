@@ -1,5 +1,5 @@
 #include <iostream>
-#include <investimentos.h>
+#include "investimentos.h"
 
 using namespace std;
 
@@ -10,7 +10,7 @@ int main() {
 
   cout << "\nInforme o capital a ser investido = R$ ";
   cin >> i.montanteInvestido;
-  cout << "Informe a taxa de juros %a.a. = ";
+  cout << "Informe a taxa de juros % Ao ano = ";
   cin >> i.taxaDejuros;
   cout << "Informe o periodo do investimento (em meses) = ";
   cin >> i.periodo;
@@ -23,9 +23,9 @@ int main() {
 
   cout << "\nMontante (final de " << i.periodo << " meses) com juros compostos = R$ " << montanteFinaljc(i.montanteInvestido,i.taxaDejuros,i.periodo);
 
-  cout << "\nConversao de taxa js: (" << i.taxaDejuros << "%a.a.) para (" << conversaoDeTaxajs(i.taxaDejuros) << "%a.m.)";
+  cout << "\nConversao de taxa Juros Simples: (" << i.taxaDejuros << "% Ao ano) para (" << conversaoDeTaxajs(i.taxaDejuros) << "% Ao mes)";
 
-    cout << "\nConversao de taxa jc: (" << i.taxaDejuros << "%a.a.) para (" << conversaoDeTaxajc(i.taxaDejuros) << "%a.m.)\n";
+    cout << "\nConversao de taxa Juros Composto: (" << i.taxaDejuros << "% Ao ano) para (" << conversaoDeTaxajc(i.taxaDejuros) << "% Ao mes.)\n";
     
     return 0;
 }
